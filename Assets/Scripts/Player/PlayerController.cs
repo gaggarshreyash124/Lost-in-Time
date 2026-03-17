@@ -2,6 +2,8 @@ using UnityEngine;
 using Unity.Cinemachine;
 using UnityEngine.VFX;
 using System.Collections;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,24 +16,35 @@ public class PlayerController : MonoBehaviour
     public LayerMask GroundLayer;
     public VisualEffectAsset Scan;
     [SerializeField] private float maxScanDistance = 10f;
-    [SerializeField] private float expandDuration = 3f;
+    [SerializeField] private float expandDuration = 1f;
     Collider[] ScannedObjects;
     public LayerMask targetLayerMask;
     float currentRadius = 0f;
     public Material ScanMat;
+    public Volume volume;
+    public Vignette bloom;
+    float counter;
+    [Range(0f, 1f)]
+    public float ScanEffectIntensity = 0.35f;
+
     bool TouchedGround()
     {
         return Physics.CheckSphere(GroundCheck.position, GroundCheckRadius, GroundLayer);
+        
     }
 
     void Start()
     {
         Rbody = GetComponent<Rigidbody>();
+
         InputHandler = GetComponent<PlayerInputHandler>();
+        volume.profile.TryGet(out bloom);
+        
+        
     }
     void Update()
     {
-
+        counter += Time.deltaTime;
         if (TouchedGround() && !Data.isGrounded)
         {
             Data.isGrounded = true;
@@ -43,7 +56,9 @@ public class PlayerController : MonoBehaviour
 
         if (InputHandler.ScanInput)
         {
+            counter = 0f;
             StartExpandingScan();
+            bloom.intensity.value = ScanEffectIntensity;
         }
 
     }
@@ -72,7 +87,7 @@ public class PlayerController : MonoBehaviour
 
         float multiplier = Data.isGrounded ? 1f : Data.AirMoveSpeedMultiplier;
 
-        Rbody.AddForce(moveDir * Data.MoveSpeed * 10f * multiplier, ForceMode.Force);
+        Rbody.AddForce(10f * Data.MoveSpeed * multiplier * moveDir, ForceMode.Force);
 
         Quaternion targetRotation = Quaternion.LookRotation(moveDir);
         Rbody.MoveRotation(
@@ -82,13 +97,13 @@ public class PlayerController : MonoBehaviour
 
     private void LimitSpeed()
     {
-        Vector3 flatVelocity = new Vector3(Rbody.linearVelocity.x, 0f, Rbody.linearVelocity.z);
+        Vector3 flatVelocity = new(Rbody.linearVelocity.x, 0f, Rbody.linearVelocity.z);
 
         if (flatVelocity.magnitude <= Data.MoveSpeed) return;
 
         Vector3 limited = flatVelocity.normalized * Data.MoveSpeed;
 
-        Rbody.linearVelocity = new Vector3(limited.x, Rbody.linearVelocity.y, limited.z);
+        Rbody.linearVelocity = new(limited.x, Rbody.linearVelocity.y, limited.z);
     }
 
     private void ApplyDrag()
@@ -97,6 +112,7 @@ public class PlayerController : MonoBehaviour
     }
     public void StartExpandingScan()
     {
+        InputHandler.ScanInput = false;
         StartCoroutine(ExpandingScanCoroutine());
     }
 
@@ -104,20 +120,21 @@ public class PlayerController : MonoBehaviour
     {
         float elapsed = 0f;
 
-
         while (elapsed < expandDuration)
         {
             elapsed += Time.deltaTime;
-            currentRadius = Mathf.Lerp(0f, maxScanDistance, elapsed / expandDuration); // Smooth expansion [web:19]
+            currentRadius = Mathf.Lerp(0f, maxScanDistance, elapsed / expandDuration);
 
-            ScannedObjects = Physics.OverlapSphere(transform.position, currentRadius, targetLayerMask);
-            foreach (Collider col in ScannedObjects)
+            int hitCount = Physics.OverlapSphereNonAlloc(transform.position, currentRadius, ScannedObjects, targetLayerMask);
+            for (int i = 0; i < hitCount; i++)
             {
-                col.GetComponent<MeshRenderer>().material = ScanMat;
+                ScannedObjects[i].GetComponent<MeshRenderer>().material = ScanMat;
             }
 
             yield return null;
         }
+        
+        bloom.intensity.value = 0f;
     }
 
     void OnDrawGizmosSelected()
