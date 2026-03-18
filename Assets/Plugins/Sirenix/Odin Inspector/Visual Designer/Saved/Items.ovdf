@@ -1,0 +1,39 @@
+OVDF v1.1
+Items, Assembly-CSharp
+MetaGuid:de824577adddc7e48ba0ab60f598d255
+
+# "Item Information"
+Position: $FdUszDfkYisxdg2fysmZwQ:0
+* [Sirenix.OdinInspector.TitleGroupAttribute]
+	BoldTitle = False
+	Alignment = Left
+
+# $Fg4acencU8aqHQDLT2uGin
+Position: $root:0
++ [Sirenix.OdinInspector.ColumnGroupAttribute]
+
+# $FdUszDfkYisxdg2fysmZwQ
+Position: $Fg4acencU8aqHQDLT2uGin:0
++ [Sirenix.OdinInspector.ColumnGroupAttribute+ColumnSubGroupAttribute]
+
+# $JWaNpWV3G3Zdmr1HKMdFbK
+Position: "Item Information":0
++ [Sirenix.OdinInspector.ColumnGroupAttribute]
+
+# $HAQdBvuKoEe14QDyumRazi
+Position: $JWaNpWV3G3Zdmr1HKMdFbK:0
++ [Sirenix.OdinInspector.ColumnGroupAttribute+ColumnSubGroupAttribute]
+
+# $YDMskeZXP8gziGTW4xcZ9j
+Position: $JWaNpWV3G3Zdmr1HKMdFbK:1
++ [Sirenix.OdinInspector.ColumnGroupAttribute+ColumnSubGroupAttribute]
+
+# ItemSprite
+Position: $HAQdBvuKoEe14QDyumRazi:0
++ [Sirenix.OdinInspector.PreviewFieldAttribute]
+	Height = 151.8
+	alignment = Left
+	alignmentHasValue = True
+
+# ItemName
+Position: $YDMskeZXP8gziGTW4xcZ9j:0
