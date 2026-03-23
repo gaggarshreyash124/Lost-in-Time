@@ -1,30 +1,37 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
-public class InventoryItem : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
+public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Image ItemImage;
-    public Items Item;
+
     [HideInInspector]
     public Transform parentAfterDrag;
+
     public void OnBeginDrag(PointerEventData eventData)
     {
-        ItemImage.raycastTarget = false;
         parentAfterDrag = transform.parent;
+
+        ItemImage.raycastTarget = false;
+
         transform.SetParent(transform.root);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;
+        if (Mouse.current != null)
+        {
+            Vector2 mousePosition = Mouse.current.position.ReadValue();
+            transform.position = mousePosition;
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         ItemImage.raycastTarget = true;
+
         transform.SetParent(parentAfterDrag);
     }
-    
-
 }
