@@ -1,0 +1,8 @@
+OVDF v1.1
+PlayerData, Assembly-CSharp
+MetaGuid:ef738ba2a7cf01448917a3b102e74b08
+
+# MoveSpeed
++ [Sirenix.OdinInspector.PropertyRangeAttribute]
+	Max = 100
+	MinGetter = ""
