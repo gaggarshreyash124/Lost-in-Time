@@ -10,10 +10,11 @@ public class UITransitionScript : MonoBehaviour
         CurrentCam.Priority++;
     }
 
-    public void updatecam(CinemachineCamera target)
+    public void SwitchToCam(CinemachineCamera target)
     {
         CurrentCam.Priority--;
         CurrentCam = target;
         CurrentCam.Priority++;
     }
+
 }
