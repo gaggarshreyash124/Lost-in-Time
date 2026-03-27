@@ -7,7 +7,7 @@ public class UITransitionScript : MonoBehaviour
 
     void Start()
     {
-        CurrentCam.Priority++;
+        
     }
 
     public void SwitchToCam(CinemachineCamera target)
