@@ -1,5 +1,6 @@
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UITransitionScript : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class UITransitionScript : MonoBehaviour
         CurrentCam.Priority--;
         CurrentCam = target;
         CurrentCam.Priority++;
+    }
+    public void Play()
+    {
+        SceneManager.LoadScene(1);
     }
 
 }
