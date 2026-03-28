@@ -4,6 +4,7 @@ using UnityEngine.VFX;
 using System.Collections;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using Unity.VisualScripting;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,10 +20,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float expandDuration = 1f;
     Collider[] ScannedObjects;
     public LayerMask targetLayerMask;
+    public LayerMask InteractableLayerMask;
     float currentRadius = 0f;
     public Material ScanMat;
-    public Volume volume;
-    public Vignette bloom;
     float counter;
     [Range(0f, 1f)]
     public float ScanEffectIntensity = 0.35f;
@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
     bool TouchedGround()
     {
         return Physics.CheckSphere(GroundCheck.position, GroundCheckRadius, GroundLayer);
-        
     }
 
     void Start()
@@ -38,7 +37,6 @@ public class PlayerController : MonoBehaviour
         Rbody = GetComponent<Rigidbody>();
 
         InputHandler = GetComponent<PlayerInputHandler>();
-        volume.profile.TryGet(out bloom);
         
         
     }
@@ -58,15 +56,20 @@ public class PlayerController : MonoBehaviour
         {
             counter = 0f;
             StartExpandingScan();
-            bloom.intensity.value = ScanEffectIntensity;
         }
-
+        if (InputHandler.InteractInput)
+        {
+            CheckForDoors();
+            InputHandler.InteractInput = false;
+        }
     }
+    
     void FixedUpdate()
     {
         HandleMovement();
         LimitSpeed();
         ApplyDrag();
+        
     }
 
     private void HandleMovement()
@@ -115,7 +118,26 @@ public class PlayerController : MonoBehaviour
         InputHandler.ScanInput = false;
         StartCoroutine(ExpandingScanCoroutine());
     }
-
+    public void CheckForDoors()
+    {
+        Physics.Raycast(FollowCam.transform.position, FollowCam.transform.forward, out RaycastHit hit, 3f, InteractableLayerMask);
+        if (hit.collider != null)
+        {
+            if (hit.collider.CompareTag("Door"))
+            {
+                if (hit.collider.transform.rotation.y == 0f)
+                {
+                    hit.collider.transform.Rotate(0f, -90f, 0f);
+                }
+                else
+                {
+                    hit.collider.transform.Rotate(0f, 90f, 0f);
+                }
+                Debug.Log("Door Checked");
+            }
+            
+        }
+    }
     private IEnumerator ExpandingScanCoroutine()
     {
         float elapsed = 0f;
@@ -134,13 +156,14 @@ public class PlayerController : MonoBehaviour
             yield return null;
         }
         
-        bloom.intensity.value = 0f;
     }
 
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, currentRadius);
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(FollowCam.transform.position, FollowCam.transform.forward * 3f);
     }
 
 }

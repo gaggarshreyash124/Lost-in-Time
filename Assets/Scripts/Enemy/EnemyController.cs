@@ -1,22 +1,93 @@
 using UnityEngine;
+using System.Collections;
+using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
-    public float DetectionDistance;
-    public float DetectionTime;
-    public float SuspisionMeter;
+    public float radius;
+    [Range(0, 360)]
+    public float angle;
 
-    void Start()
+    public GameObject playerRef;
+
+    public LayerMask targetMask;
+    public LayerMask obstructionMask;
+
+    public bool canSeePlayer;
+    public Transform[] PatrolPoints;
+    public int destPoint = 0;
+    public bool iswaiting = false;
+    public float waitTime = 2f;
+    public float threshold = 0.5f;
+    private NavMeshAgent agent;
+
+    private void Start()
     {
-        
+        playerRef = GameObject.FindGameObjectWithTag("Player");
+        agent = GetComponent<NavMeshAgent>();
+        GotoNextPoint();
+        StartCoroutine(FOVRoutine());
+    }
+
+    private IEnumerator FOVRoutine()
+    {
+        WaitForSeconds wait = new WaitForSeconds(0.2f);
+
+        while (true)
+        {
+            yield return wait;
+            FieldOfViewCheck();
+        }
+    }
+
+    private void FieldOfViewCheck()
+    {
+        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
+
+        if (rangeChecks.Length != 0)
+        {
+            Transform target = rangeChecks[0].transform;
+            Vector3 directionToTarget = (target.position - transform.position).normalized;
+
+            if (Vector3.Angle(transform.forward, directionToTarget) < angle / 2)
+            {
+                float distanceToTarget = Vector3.Distance(transform.position, target.position);
+
+                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
+                    canSeePlayer = true;
+                else
+                    canSeePlayer = false;
+            }
+            else
+                canSeePlayer = false;
+        }
+        else if (canSeePlayer)
+            canSeePlayer = false;
+    }
+
+
+    void GotoNextPoint()
+    {
+        if (PatrolPoints.Length == 0) return;
+        agent.destination = PatrolPoints[destPoint].position;
+        destPoint = (destPoint + 1) % PatrolPoints.Length;
     }
 
     void Update()
     {
-        
+        if (iswaiting) return;
+        if (!agent.pathPending && agent.remainingDistance < threshold)
+        {
+            StartCoroutine(WaitThenPatrol());
+        }
     }
-    void FixedUpdate()
+
+    IEnumerator WaitThenPatrol()
     {
-    
+        iswaiting = true;
+        agent.ResetPath();  // Stop precisely at point
+        yield return new WaitForSeconds(waitTime);
+        GotoNextPoint();
+        iswaiting = false;
     }
 }

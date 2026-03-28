@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/MainMenu.unity.meta
+guid: dab9c6ff2a1b70046ac643fca74edc3b
+DefaultImporter:
+========
 guid: 62d9133186dcde34b8a05ab761b546b6
 PrefabImporter:
+>>>>>>>> Cutscene:Assets/Scenes/Chair.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
