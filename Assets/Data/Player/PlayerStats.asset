@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef738ba2a7cf01448917a3b102e74b08, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
-  MoveSpeed: 17.3
+  MoveSpeed: 19.7
   isGrounded: 0
   AirDrag: 0
   GroundDrag: 5

@@ -27,4 +27,11 @@ public class PlayerInputHandler : MonoBehaviour
             ScanInput = true;
         }
     }
+    public void onInteractInput(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            InteractInput = true;
+        }
+    }
 }
