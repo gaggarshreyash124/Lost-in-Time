@@ -67,7 +67,7 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Lost-in-Time.slnx",
+    "dotnet.defaultSolution": "Lost-in-Time.sln",
     "dotrush.roslyn.projectOrSolutionFiles": [
         "d:\\Projects\\Github\\Lost-in-Time\\Lost in Time.slnx"
     ],
