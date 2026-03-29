@@ -5,5 +5,6 @@ using UnityEngine;
 public class SceneData : ScriptableObject
 {
     public GameObject[] Clues;
-    public static HashSet<string> foundClues = new HashSet<string>();
+    public HashSet<string> foundClues = new HashSet<string>();
+    
 }
