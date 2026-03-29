@@ -2,14 +2,10 @@ using UnityEngine;
 using Unity.Cinemachine;
 using UnityEngine.VFX;
 using System.Collections;
-using UnityEngine.Rendering;
-using UnityEngine.Rendering.Universal;
-using Unity.VisualScripting;
 
 public class PlayerController : MonoBehaviour
 {
     Rigidbody Rbody;
-    PlayerInputHandler InputHandler;
     [SerializeField] PlayerData Data;
     [SerializeField] CinemachineCamera FollowCam;
     public Transform GroundCheck;
@@ -35,9 +31,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Rbody = GetComponent<Rigidbody>();
-
-        InputHandler = GetComponent<PlayerInputHandler>();
-        
         
     }
     void Update()
@@ -52,15 +45,14 @@ public class PlayerController : MonoBehaviour
             Data.isGrounded = false;
         }
 
-        if (InputHandler.ScanInput)
+        if (PlayerInputHandler.Instance.ScanInput)
         {
             counter = 0f;
             StartExpandingScan();
         }
-        if (InputHandler.InteractInput)
+        if (PlayerInputHandler.Instance.InteractInput)
         {
             CheckForDoors();
-            InputHandler.InteractInput = false;
         }
     }
     
@@ -74,7 +66,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
-        Vector2 input = InputHandler.MoveInput;
+        Vector2 input = PlayerInputHandler.Instance.MoveInput;
         if (input.sqrMagnitude < 0.01f) return;
 
         Vector3 camForward = FollowCam.transform.forward;
@@ -115,7 +107,7 @@ public class PlayerController : MonoBehaviour
     }
     public void StartExpandingScan()
     {
-        InputHandler.ScanInput = false;
+        PlayerInputHandler.Instance.ScanInput = false;
         StartCoroutine(ExpandingScanCoroutine());
     }
     public void CheckForDoors()
