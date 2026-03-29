@@ -2,6 +2,7 @@ using UnityEngine;
 using Unity.Cinemachine;
 using UnityEngine.VFX;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -53,6 +54,7 @@ public class PlayerController : MonoBehaviour
         if (PlayerInputHandler.Instance.InteractInput)
         {
             CheckForDoors();
+            CheckForEndofScene();
         }
     }
     
@@ -128,6 +130,18 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Door Checked");
             }
             
+        }
+    }
+    public void CheckForEndofScene()
+    {
+        Physics.Raycast(FollowCam.transform.position, FollowCam.transform.forward, out RaycastHit hit, 3f, InteractableLayerMask);
+        if (hit.collider != null)
+        {
+            if (hit.collider.CompareTag("Finish") && GameManager.Instance.foundClues.Count == GameManager.Instance.sceneData.Clues.Length)
+            {
+                int NextSceneIndex = GameManager.Instance.currentSceneIndex + 1;
+                SceneManager.LoadScene(NextSceneIndex);
+            }
         }
     }
     private IEnumerator ExpandingScanCoroutine()
