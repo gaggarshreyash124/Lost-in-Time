@@ -2570,7 +2570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1df2d13ee79e24ca1a7b8823d1c7d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clue
-  clueName: 
+  clueName: clue2
   clue: {fileID: 306036821}
   isFound: 0
 --- !u!1001 &734346336
@@ -3976,8 +3976,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44647da7518433944ac03af43cba9b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  sceneData: {fileID: 0}
+  sceneData: {fileID: 11400000, guid: 61e68d7f7ee1d8e4f9e33ecdaa4c8ea8, type: 2}
+  Objective: {fileID: 1894628318}
   foundClues: []
+  currentSceneIndex: 0
 --- !u!4 &1017815764
 Transform:
   m_ObjectHideFlags: 0
@@ -5253,7 +5255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1df2d13ee79e24ca1a7b8823d1c7d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clue
-  clueName: 
+  clueName: clue 3
   clue: {fileID: 1584377320}
   isFound: 0
 --- !u!1 &1584377320
@@ -7189,7 +7191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1df2d13ee79e24ca1a7b8823d1c7d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clue
-  clueName: 
+  clueName: clue 1
   clue: {fileID: 1243159778}
   isFound: 0
 --- !u!1 &2094688010
@@ -9254,9 +9256,10 @@ GameObject:
   - component: {fileID: 2902284815622163014}
   - component: {fileID: 1098715536852568265}
   - component: {fileID: 6236355720029722426}
-  m_Layer: 10
+  - component: {fileID: 6236355720029722427}
+  m_Layer: 9
   m_Name: "\u041E\u0431\u044A\u0435\u043A\u0442_\u041A\u0443\u0431"
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11449,6 +11452,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6236355720029722427
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2782277349239778550}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3197455731191493066, guid: 3f1e5348037803a4c8e2511fd11fae70, type: 3}
 --- !u!33 &6262914236327883500
 MeshFilter:
   m_ObjectHideFlags: 0
