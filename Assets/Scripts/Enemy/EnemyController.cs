@@ -21,12 +21,32 @@ public class EnemyController : MonoBehaviour
     public float threshold = 0.5f;
     private NavMeshAgent agent;
 
+    [Header("Angle Limits")]
+    public float minAngle = -45f;
+    public float maxAngle = 45f;
+    public bool startMovingRight = true;
+
+    [Header("Rotation Settings")]
+    public float rotationSpeed = 100f;
+    float currentAngle;
+    int direction;
+
     private void Start()
     {
-        playerRef = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
         GotoNextPoint();
         StartCoroutine(FOVRoutine());
+
+        currentAngle = minAngle;
+        direction = startMovingRight ? 1 : -1;
+
+        ApplyRotation();
+    }
+    void ApplyRotation()
+    {
+        Vector3 rot = Raypoint.transform.localEulerAngles;
+        rot.y = currentAngle;
+        Raypoint.transform.localEulerAngles = rot;
     }
 
     private IEnumerator FOVRoutine()
@@ -37,6 +57,7 @@ public class EnemyController : MonoBehaviour
         {
             yield return wait;
             FieldOfViewCheck();
+            GameManager.Instance.Detected = canSeePlayer;
         }
     }
 
@@ -54,9 +75,14 @@ public class EnemyController : MonoBehaviour
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
                 if (!Physics.Raycast(Raypoint.position, directionToTarget, distanceToTarget, obstructionMask))
+                {
                     canSeePlayer = true;
+                    GameManager.Instance.DetectionTime = Time.time;
+                }
                 else
+                {
                     canSeePlayer = false;
+                }
             }
             else
                 canSeePlayer = false;
@@ -75,7 +101,20 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-       
+       currentAngle += direction * rotationSpeed * Time.deltaTime;
+
+        if(currentAngle >= maxAngle)
+        {
+            currentAngle = maxAngle;
+            direction = -1;
+        }
+        else if(currentAngle <= minAngle)
+        {
+            currentAngle = minAngle;
+            direction = 1;
+        }
+
+        ApplyRotation();
     }
     void Patrol()
     {
@@ -95,4 +134,6 @@ public class EnemyController : MonoBehaviour
         GotoNextPoint();
         iswaiting = false;
     }
+
+    
 }

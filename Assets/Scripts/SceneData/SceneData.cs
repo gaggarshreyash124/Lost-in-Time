@@ -6,5 +6,5 @@ public class SceneData : ScriptableObject
 {
     public GameObject[] Clues;
     public HashSet<string> foundClues = new HashSet<string>();
-    
-}
+    public string ObjectiveText ;
+}   

@@ -16,6 +16,15 @@ public class GameManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip audioClip;
     bool audioPlayed = false;
+    public bool Detected;
+    public float DetectionTime;
+    public float CaughtTime = 5f;
+    public GameObject CaughtPanel;
+    bool Caught = false;
+    public GameObject Warning;
+
+    [HideInInspector]
+    public bool KeycardsFound = false;
     private void Awake() {
         Instance = this;
         playableDirector = GetComponent<PlayableDirector>();
@@ -28,7 +37,7 @@ public class GameManager : MonoBehaviour
     {
         foundClues.Add(clueID);
         clueObject.SetActive(true);
-        Objective.text = "Objective - Find The Clues Scattered Across the House(" + foundClues.Count + "/3)";
+        Objective.text = sceneData.ObjectiveText;
         if (playableAsset != null)
         {
             playableDirector.Play(playableAsset);
@@ -42,6 +51,19 @@ public class GameManager : MonoBehaviour
                 audioSource.PlayOneShot(audioClip);
                 audioPlayed = true;
             }
+        }
+    }
+
+    private void Update() {
+        if (Detected && !Caught && Time.time - DetectionTime > CaughtTime) {
+            Caught = true;
+            CaughtPanel.SetActive(true);
+        }
+        else if (Detected && !Caught) {
+            Warning.SetActive(true);
+        }
+        else {
+            Warning.SetActive(false);
         }
     }
     

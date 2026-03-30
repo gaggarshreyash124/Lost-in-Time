@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Rbody = GetComponent<Rigidbody>();
-        
+
     }
     void Update()
     {
@@ -57,15 +57,14 @@ public class PlayerController : MonoBehaviour
             CheckForEndofScene();
         }
     }
-    
+
     void FixedUpdate()
     {
         HandleMovement();
         LimitSpeed();
         ApplyDrag();
-        
-    }
 
+    }
     private void HandleMovement()
     {
         Vector2 input = PlayerInputHandler.Instance.MoveInput;
@@ -129,7 +128,22 @@ public class PlayerController : MonoBehaviour
                 }
                 Debug.Log("Door Checked");
             }
-            
+            else if (hit.collider.CompareTag("LockedDoor"))
+            {
+                if (GameManager.Instance.KeycardsFound)
+                {
+                    if (hit.collider.transform.rotation.y == 0f)
+                    {
+                        hit.collider.transform.Rotate(0f, -90f, 0f);
+                    }
+                    else
+                    {
+                        hit.collider.transform.Rotate(0f, 90f, 0f);
+                    }
+                    Debug.Log("Door Checked");
+                }
+            }
+
         }
     }
     public void CheckForEndofScene()
@@ -161,9 +175,7 @@ public class PlayerController : MonoBehaviour
 
             yield return null;
         }
-        
     }
-
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
