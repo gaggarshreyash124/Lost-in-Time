@@ -7,7 +7,7 @@ public class EnemyController : MonoBehaviour
     public float radius;
     [Range(0, 360)]
     public float angle;
-
+    public Transform Raypoint;
     public GameObject playerRef;
 
     public LayerMask targetMask;
@@ -53,7 +53,7 @@ public class EnemyController : MonoBehaviour
             {
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
-                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
+                if (!Physics.Raycast(Raypoint.position, directionToTarget, distanceToTarget, obstructionMask))
                     canSeePlayer = true;
                 else
                     canSeePlayer = false;
@@ -75,7 +75,12 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
+       
+    }
+    void Patrol()
+    {
         if (iswaiting) return;
+        
         if (!agent.pathPending && agent.remainingDistance < threshold)
         {
             StartCoroutine(WaitThenPatrol());
