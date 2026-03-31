@@ -16,5 +16,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  ObjectiveText: '"Objective - Find The Clues Scattered Across the House(" + GameManager.Instance.foundClues.Count
-    + "/3)"'
+  ObjectiveText: 
+  Cluestart: Objective - Find The Clues Scattered Across the House(
+  Clueend: /3)

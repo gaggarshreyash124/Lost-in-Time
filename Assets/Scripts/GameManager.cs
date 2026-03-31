@@ -22,18 +22,31 @@ public class GameManager : MonoBehaviour
     public GameObject CaughtPanel;
     bool Caught = false;
     public GameObject Warning;
+    public float DetectionTimer;
 
     [HideInInspector]
     public bool KeycardsFound = false;
-    private void Awake() {
+    private void Awake()
+    {
         Instance = this;
         playableDirector = GetComponent<PlayableDirector>();
     }
-    private void Start() {
+    private void Start()
+    {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
-    public void OnClueFound(string clueID, GameObject clueObject,PlayableAsset playableAsset)
+    public void OnClueFound(string clueID, GameObject clueObject, PlayableAsset playableAsset)
+    {
+        foundClues.Add(clueID);
+        clueObject.SetActive(true);
+        Objective.text = sceneData.Cluestart + foundClues.Count + sceneData.Clueend;
+        if (playableAsset != null)
+        {
+            playableDirector.Play(playableAsset);
+        }
+    }
+    public void OnPickableFound(string clueID, GameObject clueObject, PlayableAsset playableAsset)
     {
         foundClues.Add(clueID);
         clueObject.SetActive(true);
@@ -43,8 +56,10 @@ public class GameManager : MonoBehaviour
             playableDirector.Play(playableAsset);
         }
     }
-    private void LateUpdate() {
-        if (foundClues.Count == sceneData.Clues.Length) {
+    private void LateUpdate()
+    {
+        if (foundClues.Count == sceneData.Clues.Length)
+        {
             if (playableDirector.state != PlayState.Playing && !audioPlayed)
             {
                 Objective.text = "Objectivew - Head to The Door";
@@ -54,17 +69,25 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Update() {
-        if (Detected && !Caught && Time.time - DetectionTime > CaughtTime) {
-            Caught = true;
-            CaughtPanel.SetActive(true);
+    private void Update()
+    {
+        if (Warning != null)
+        {
+            if (Detected)
+            {
+                if (!Caught && Time.time - DetectionTime > CaughtTime)
+                {
+                    Caught = true;
+                    CaughtPanel.SetActive(true);
+                }
+                Warning.SetActive(true);
+            }
+            else 
+            {
+                Warning.SetActive(false);
+            }
         }
-        else if (Detected && !Caught) {
-            Warning.SetActive(true);
-        }
-        else {
-            Warning.SetActive(false);
-        }
+
     }
-    
+
 }

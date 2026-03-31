@@ -7,4 +7,8 @@ public class SceneData : ScriptableObject
     public GameObject[] Clues;
     public HashSet<string> foundClues = new HashSet<string>();
     public string ObjectiveText ;
+    public string Cluestart;
+    public string Clueend;
+    private void Awake() {
+    }
 }   
