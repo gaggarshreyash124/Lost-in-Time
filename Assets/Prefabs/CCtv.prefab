@@ -139,8 +139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac8aa5a2f9e397d4585599e9f14f2447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  radius: 55
-  angle: 81
+  radius: 70
+  angle: 106
   Raypoint: {fileID: 4979168613478341799}
   playerRef: {fileID: 0}
   targetMask:
@@ -149,16 +149,21 @@ MonoBehaviour:
   obstructionMask:
     serializedVersion: 2
     m_Bits: 1280
-  canSeePlayer: 0
   PatrolPoints: []
   destPoint: 0
   iswaiting: 0
   waitTime: 2
   threshold: 0.5
+  Detected: 0
   minAngle: -45
   maxAngle: 45
   startMovingRight: 1
   rotationSpeed: 100
+  DetectionTime: 0
+  CaughtTime: 5
+  Caught: 0
+  CaughtPanel: {fileID: 0}
+  Warning: {fileID: 0}
 --- !u!1 &3235778404117015320
 GameObject:
   m_ObjectHideFlags: 0

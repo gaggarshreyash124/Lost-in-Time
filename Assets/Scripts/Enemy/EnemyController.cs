@@ -31,6 +31,16 @@ public class EnemyController : MonoBehaviour
     float currentAngle;
     int direction;
 
+
+    public float DetectionTime;
+    public float CaughtTime = 2f;
+    public bool Caught = false;
+    public GameObject CaughtPanel;
+    public GameObject Warning;
+    private float lastSeenTime;
+    [SerializeField] float loseDetectionDelay = 0.5f;
+
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -62,6 +72,8 @@ public class EnemyController : MonoBehaviour
 
     private void FieldOfViewCheck()
     {
+        bool targetCurrentlyVisible = false;
+
         Collider[] rangeChecks = Physics.OverlapSphere(Raypoint.transform.position, radius, targetMask);
 
         if (rangeChecks.Length != 0)
@@ -75,19 +87,28 @@ public class EnemyController : MonoBehaviour
 
                 if (!Physics.Raycast(Raypoint.position, directionToTarget, distanceToTarget, obstructionMask))
                 {
-                    Detected = true;
-                    GameManager.Instance.DetectionTimer = Time.time;
-                }
-                else
-                {
-                    Detected = false;
+                    targetCurrentlyVisible = true;
                 }
             }
-            else
-                Detected = false;
         }
-        else
+
+        // TARGET SEEN
+        if (targetCurrentlyVisible)
+        {
+            lastSeenTime = Time.time;
+
+            if (!Detected)
+            {
+                Detected = true;
+                DetectionTime = Time.time;
+            }
+        }
+
+        // TARGET LOST (with delay buffer)
+        if (Detected && Time.time - lastSeenTime > loseDetectionDelay)
+        {
             Detected = false;
+        }
     }
 
 
@@ -100,25 +121,42 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-       currentAngle += direction * rotationSpeed * Time.deltaTime;
+        currentAngle += direction * rotationSpeed * Time.deltaTime;
 
-        if(currentAngle >= maxAngle)
+        if (currentAngle >= maxAngle)
         {
             currentAngle = maxAngle;
             direction = -1;
         }
-        else if(currentAngle <= minAngle)
+        else if (currentAngle <= minAngle)
         {
             currentAngle = minAngle;
             direction = 1;
         }
 
         ApplyRotation();
+        if (Detected)
+        {
+            if (!Warning.activeSelf)
+                Warning.SetActive(true);
+                
+
+            if (!Caught && Time.time - DetectionTime > CaughtTime)
+            {
+                Caught = true;
+                CaughtPanel.SetActive(true);
+            }
+        }
+        else
+        {
+            if (Warning.activeSelf)
+                Warning.SetActive(false);
+        }
     }
     void Patrol()
     {
         if (iswaiting) return;
-        
+
         if (!agent.pathPending && agent.remainingDistance < threshold)
         {
             StartCoroutine(WaitThenPatrol());
@@ -134,7 +172,9 @@ public class EnemyController : MonoBehaviour
         iswaiting = false;
     }
 
-    private void OnDrawGizmos() {
+    private void OnDrawGizmos()
+    {
         Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(Raypoint.position, radius);
     }
 }

@@ -16,15 +16,7 @@ public class GameManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip audioClip;
     bool audioPlayed = false;
-    public bool Detected;
-    public float DetectionTime;
-    public float CaughtTime = 5f;
-    public GameObject CaughtPanel;
-    bool Caught = false;
-    public GameObject Warning;
-    public float DetectionTimer;
-
-    [HideInInspector]
+    
     public bool KeycardsFound = false;
     private void Awake()
     {
@@ -50,13 +42,13 @@ public class GameManager : MonoBehaviour
     {
         foundClues.Add(clueID);
         clueObject.SetActive(true);
-        Objective.text = sceneData.ObjectiveText;
+        Objective.text = "Objective - " + sceneData.ObjectiveText;
         if (playableAsset != null)
         {
             playableDirector.Play(playableAsset);
         }
     }
-    private void LateUpdate()
+    private void Update()
     {
         if (foundClues.Count == sceneData.Clues.Length)
         {
@@ -67,26 +59,7 @@ public class GameManager : MonoBehaviour
                 audioPlayed = true;
             }
         }
-    }
-
-    private void Update()
-    {
-        if (Warning != null)
-        {
-            if (Detected)
-            {
-                if (!Caught && Time.time - DetectionTime > CaughtTime)
-                {
-                    Caught = true;
-                    CaughtPanel.SetActive(true);
-                }
-                Warning.SetActive(true);
-            }
-            else 
-            {
-                Warning.SetActive(false);
-            }
-        }
+        
 
     }
 

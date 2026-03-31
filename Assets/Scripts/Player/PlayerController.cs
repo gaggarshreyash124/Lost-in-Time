@@ -21,8 +21,8 @@ public class PlayerController : MonoBehaviour
     float currentRadius = 0f;
     public Material ScanMat;
     float counter;
-    [Range(0f, 1f)]
-    public float ScanEffectIntensity = 0.35f;
+    [Range(0f, 10f)]
+    public float interactableraycastDistance = 5f;
 
     bool TouchedGround()
     {
@@ -134,13 +134,17 @@ public class PlayerController : MonoBehaviour
                 {
                     if (hit.collider.transform.rotation.y == 0f)
                     {
-                        hit.collider.transform.Rotate(0f, -90f, 0f);
+                        hit.collider.transform.Rotate(0f, 0f, -90f);
                     }
                     else
                     {
-                        hit.collider.transform.Rotate(0f, 90f, 0f);
+                        hit.collider.transform.Rotate(0f, 0f, 90f);
                     }
-                    Debug.Log("Door Checked");
+                    Debug.Log("Door opened");
+                }
+                else
+                {
+                    Debug.Log("Door is Locked");
                 }
             }
 
@@ -148,7 +152,7 @@ public class PlayerController : MonoBehaviour
     }
     public void CheckForEndofScene()
     {
-        Physics.Raycast(FollowCam.transform.position, FollowCam.transform.forward, out RaycastHit hit, 3f, InteractableLayerMask);
+        Physics.Raycast(FollowCam.transform.position, FollowCam.transform.forward, out RaycastHit hit, interactableraycastDistance, InteractableLayerMask);
         if (hit.collider != null)
         {
             if (hit.collider.CompareTag("Finish") && GameManager.Instance.foundClues.Count == GameManager.Instance.sceneData.Clues.Length)
@@ -181,7 +185,7 @@ public class PlayerController : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, currentRadius);
         Gizmos.color = Color.red;
-        Gizmos.DrawRay(FollowCam.transform.position, FollowCam.transform.forward * 3f);
+        Gizmos.DrawRay(FollowCam.transform.position, FollowCam.transform.forward * interactableraycastDistance);
     }
 
 }

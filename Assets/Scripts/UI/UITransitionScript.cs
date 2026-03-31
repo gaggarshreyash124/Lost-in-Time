@@ -22,4 +22,14 @@ public class UITransitionScript : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
 }
