@@ -231,66 +231,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -470067213634067786, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &40531589
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 191614898}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: d3791a8f15039d247a6c336421917189, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -470067213634067786, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
 --- !u!64 &55603030
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -313,66 +253,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -567259905036692206, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &55603031
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 191614889}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: d3791a8f15039d247a6c336421917189, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -567259905036692206, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
 --- !u!1001 &71009006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1692,184 +1572,184 @@ PrefabInstance:
       addedObject: {fileID: 395675074}
     - targetCorrespondingSourceObject: {fileID: -8794930985069982483, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 191614914}
+      addedObject: {fileID: 191614913}
     - targetCorrespondingSourceObject: {fileID: -8794930985069982483, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 191614913}
-    - targetCorrespondingSourceObject: {fileID: -6055966243612723326, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2089911188}
+      addedObject: {fileID: 191614914}
     - targetCorrespondingSourceObject: {fileID: -6055966243612723326, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2089911187}
-    - targetCorrespondingSourceObject: {fileID: -4123406009253627144, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -6055966243612723326, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 191614912}
+      addedObject: {fileID: 2089911188}
     - targetCorrespondingSourceObject: {fileID: -4123406009253627144, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 191614911}
-    - targetCorrespondingSourceObject: {fileID: 5079447371881876404, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -4123406009253627144, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 892105033}
+      addedObject: {fileID: 191614912}
     - targetCorrespondingSourceObject: {fileID: 5079447371881876404, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 892105032}
-    - targetCorrespondingSourceObject: {fileID: -7029948723529949830, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 5079447371881876404, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 191614910}
+      addedObject: {fileID: 892105033}
     - targetCorrespondingSourceObject: {fileID: -7029948723529949830, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 191614909}
-    - targetCorrespondingSourceObject: {fileID: 5148817236446094103, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -7029948723529949830, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1107021497}
+      addedObject: {fileID: 191614910}
     - targetCorrespondingSourceObject: {fileID: 5148817236446094103, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1107021496}
-    - targetCorrespondingSourceObject: {fileID: 6507901977716847365, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 5148817236446094103, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 595130083}
+      addedObject: {fileID: 1107021497}
     - targetCorrespondingSourceObject: {fileID: 6507901977716847365, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 595130082}
-    - targetCorrespondingSourceObject: {fileID: -8961359253771211100, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 6507901977716847365, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1928814703}
+      addedObject: {fileID: 595130083}
     - targetCorrespondingSourceObject: {fileID: -8961359253771211100, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1928814702}
-    - targetCorrespondingSourceObject: {fileID: 4767400413853537203, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -8961359253771211100, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1581604044}
+      addedObject: {fileID: 1928814703}
     - targetCorrespondingSourceObject: {fileID: 4767400413853537203, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1581604043}
-    - targetCorrespondingSourceObject: {fileID: -1063203228461421988, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 4767400413853537203, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 311299577}
+      addedObject: {fileID: 1581604044}
     - targetCorrespondingSourceObject: {fileID: -1063203228461421988, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 311299576}
-    - targetCorrespondingSourceObject: {fileID: 50754954277266222, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -1063203228461421988, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 40531589}
+      addedObject: {fileID: 311299577}
     - targetCorrespondingSourceObject: {fileID: 50754954277266222, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 40531588}
-    - targetCorrespondingSourceObject: {fileID: -1857309847194865932, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 50754954277266222, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 206833989}
+      addedObject: {fileID: 1806817225}
     - targetCorrespondingSourceObject: {fileID: -1857309847194865932, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 206833988}
-    - targetCorrespondingSourceObject: {fileID: -8153468022190502949, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -1857309847194865932, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1604478135}
+      addedObject: {fileID: 206833989}
     - targetCorrespondingSourceObject: {fileID: -8153468022190502949, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1604478134}
-    - targetCorrespondingSourceObject: {fileID: 921391927218321214, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -8153468022190502949, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1527349183}
+      addedObject: {fileID: 1604478135}
     - targetCorrespondingSourceObject: {fileID: 921391927218321214, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1527349182}
-    - targetCorrespondingSourceObject: {fileID: 5394693769120690257, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 921391927218321214, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 222326277}
+      addedObject: {fileID: 1527349183}
     - targetCorrespondingSourceObject: {fileID: 5394693769120690257, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 222326276}
-    - targetCorrespondingSourceObject: {fileID: -5049032948309972686, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 5394693769120690257, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 217836486}
+      addedObject: {fileID: 222326277}
     - targetCorrespondingSourceObject: {fileID: -5049032948309972686, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 217836485}
-    - targetCorrespondingSourceObject: {fileID: 5619302609615435187, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -5049032948309972686, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 215027671}
+      addedObject: {fileID: 217836486}
     - targetCorrespondingSourceObject: {fileID: 5619302609615435187, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 215027670}
-    - targetCorrespondingSourceObject: {fileID: 4811171726696857748, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 5619302609615435187, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1764222750}
+      addedObject: {fileID: 215027671}
     - targetCorrespondingSourceObject: {fileID: 4811171726696857748, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1764222749}
-    - targetCorrespondingSourceObject: {fileID: -3821253740895256905, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 4811171726696857748, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1749888753}
+      addedObject: {fileID: 1764222750}
     - targetCorrespondingSourceObject: {fileID: -3821253740895256905, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1749888752}
-    - targetCorrespondingSourceObject: {fileID: 3893722416717529905, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -3821253740895256905, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 55603031}
+      addedObject: {fileID: 1749888753}
     - targetCorrespondingSourceObject: {fileID: 3893722416717529905, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 55603030}
-    - targetCorrespondingSourceObject: {fileID: 3380080921822813343, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 3893722416717529905, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2095267354}
+      addedObject: {fileID: 1785728550}
     - targetCorrespondingSourceObject: {fileID: 3380080921822813343, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2095267353}
-    - targetCorrespondingSourceObject: {fileID: 1395320445879687111, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 3380080921822813343, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 785770460}
+      addedObject: {fileID: 2095267354}
     - targetCorrespondingSourceObject: {fileID: 1395320445879687111, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 785770459}
-    - targetCorrespondingSourceObject: {fileID: -2655573560833850164, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 1395320445879687111, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 545882092}
+      addedObject: {fileID: 785770460}
     - targetCorrespondingSourceObject: {fileID: -2655573560833850164, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 545882091}
-    - targetCorrespondingSourceObject: {fileID: 1585015375599971490, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -2655573560833850164, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 262015570}
+      addedObject: {fileID: 545882092}
     - targetCorrespondingSourceObject: {fileID: 1585015375599971490, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 262015569}
-    - targetCorrespondingSourceObject: {fileID: -5012882058489478073, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 1585015375599971490, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2066036769}
+      addedObject: {fileID: 262015570}
     - targetCorrespondingSourceObject: {fileID: -5012882058489478073, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2066036768}
-    - targetCorrespondingSourceObject: {fileID: -1981176674353629320, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -5012882058489478073, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 602257136}
+      addedObject: {fileID: 2066036769}
     - targetCorrespondingSourceObject: {fileID: -1981176674353629320, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 602257135}
-    - targetCorrespondingSourceObject: {fileID: 2357202460183831334, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -1981176674353629320, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1276933270}
+      addedObject: {fileID: 602257136}
     - targetCorrespondingSourceObject: {fileID: 2357202460183831334, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1276933269}
-    - targetCorrespondingSourceObject: {fileID: -1244234205430477131, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 2357202460183831334, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 907565816}
+      addedObject: {fileID: 1276933270}
     - targetCorrespondingSourceObject: {fileID: -1244234205430477131, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 907565815}
-    - targetCorrespondingSourceObject: {fileID: -1374161610312379201, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -1244234205430477131, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 348756514}
+      addedObject: {fileID: 907565816}
     - targetCorrespondingSourceObject: {fileID: -1374161610312379201, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 348756513}
-    - targetCorrespondingSourceObject: {fileID: -4887845434286715258, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -1374161610312379201, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 395675067}
+      addedObject: {fileID: 348756514}
     - targetCorrespondingSourceObject: {fileID: -4887845434286715258, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 395675066}
+    - targetCorrespondingSourceObject: {fileID: -4887845434286715258, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 395675067}
   m_SourcePrefab: {fileID: 100100000, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
 --- !u!4 &191614879 stripped
 Transform:
@@ -2043,8 +1923,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -462981019419857548, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &191614910
-SkinnedMeshRenderer:
+--- !u!23 &191614910
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2058,7 +1938,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -2068,7 +1948,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7004ae050d932534c9f5e92dba87f0a4, type: 2}
+  - {fileID: 2100000, guid: 3cd87080123ef1946aad631467046866, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2091,18 +1971,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -462981019419857548, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.13078505, y: 0.4909182, z: 0}
-    m_Extent: {x: 0.9471379, y: 1.0522742, z: 0}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &191614911
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2125,8 +1994,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4101463945012360540, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &191614912
-SkinnedMeshRenderer:
+--- !u!23 &191614912
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2140,7 +2009,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -2150,7 +2019,8 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4973734387028869240, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+  - {fileID: 2100000, guid: 4cd22b3632783164c9f9727ee85020d1, type: 2}
+  - {fileID: -4973734387028869240, guid: 3c6d97ba4fa362a41b638b2113b98616, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2173,18 +2043,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4101463945012360540, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.00001315074, y: 0.0000015893747, z: 0.010539899}
-    m_Extent: {x: 0.008863218, y: 0.00046198018, z: 0.010528037}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &191614913
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2206,9 +2065,9 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 6921594137916609588, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &191614914
-SkinnedMeshRenderer:
+  m_Mesh: {fileID: 1757943643827444769, guid: 3c6d97ba4fa362a41b638b2113b98616, type: 3}
+--- !u!23 &191614914
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2222,7 +2081,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -2233,7 +2092,7 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 4cd22b3632783164c9f9727ee85020d1, type: 2}
-  - {fileID: 3498384624342873181, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+  - {fileID: 3392243222815625112, guid: e4cca2bd22f7042429936f5db8561154, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2256,18 +2115,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 6921594137916609588, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.003845308, y: -0.000010905176, z: 0.010402169}
-    m_Extent: {x: 0.0044316156, y: 0.0009092478, z: 0.010402169}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &206833988
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2290,8 +2138,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6349497404779363362, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &206833989
-SkinnedMeshRenderer:
+--- !u!23 &206833989
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2305,7 +2153,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -2338,18 +2186,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 6349497404779363362, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &209532746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2512,8 +2349,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4147266318922990756, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &215027671
-SkinnedMeshRenderer:
+--- !u!23 &215027671
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2527,7 +2364,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -2560,18 +2397,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -4147266318922990756, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &217836485
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2594,8 +2420,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5305871256624515941, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &217836486
-SkinnedMeshRenderer:
+--- !u!23 &217836486
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2609,7 +2435,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -2642,18 +2468,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 5305871256624515941, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &220963189
 GameObject:
   m_ObjectHideFlags: 0
@@ -2813,8 +2628,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8663802791670341782, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &222326277
-SkinnedMeshRenderer:
+--- !u!23 &222326277
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2828,7 +2643,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -2861,18 +2676,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -8663802791670341782, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &222831660
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3443,8 +3247,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6124436484349841348, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &262015570
-SkinnedMeshRenderer:
+--- !u!23 &262015570
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3458,7 +3262,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -3491,18 +3295,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 6124436484349841348, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &296448674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3972,8 +3765,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8302102485596996044, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &311299577
-SkinnedMeshRenderer:
+--- !u!23 &311299577
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3987,7 +3780,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -4020,18 +3813,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -8302102485596996044, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &314942232
 GameObject:
   m_ObjectHideFlags: 0
@@ -4220,8 +4002,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7443724666282046697, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &348756514
-SkinnedMeshRenderer:
+--- !u!23 &348756514
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4235,7 +4017,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -4268,18 +4050,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -7443724666282046697, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &358668230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4708,8 +4479,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2967259907906608757, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &395675067
-SkinnedMeshRenderer:
+--- !u!23 &395675067
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4723,7 +4494,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -4733,7 +4504,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fa31e473de66f484daca9f84d3037c55, type: 2}
+  - {fileID: 2100000, guid: 106f84bbd4ade6f42ba29a49656b67a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4756,18 +4527,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -2967259907906608757, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.13078505, y: 0.4909182, z: 0}
-    m_Extent: {x: 0.9471379, y: 1.0522742, z: 0}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &395675068
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5970,8 +5730,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6761583154040148038, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &545882092
-SkinnedMeshRenderer:
+--- !u!23 &545882092
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5985,7 +5745,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -6018,18 +5778,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -6761583154040148038, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &595130082
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6052,8 +5801,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6416302070336371891, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &595130083
-SkinnedMeshRenderer:
+--- !u!23 &595130083
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6067,7 +5816,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -6100,18 +5849,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 6416302070336371891, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &598288140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6272,8 +6010,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -150120879314253014, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &602257136
-SkinnedMeshRenderer:
+--- !u!23 &602257136
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6287,7 +6025,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -6320,18 +6058,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -150120879314253014, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &620482004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8263,8 +7990,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6607839196387346367, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &785770460
-SkinnedMeshRenderer:
+--- !u!23 &785770460
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8278,7 +8005,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -8311,18 +8038,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 6607839196387346367, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &834551620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8676,8 +8392,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2696574571492749070, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &892105033
-SkinnedMeshRenderer:
+--- !u!23 &892105033
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8691,7 +8407,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -8702,7 +8418,7 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 4cd22b3632783164c9f9727ee85020d1, type: 2}
-  - {fileID: -4973734387028869240, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+  - {fileID: 3831827580505511055, guid: 3f1e5348037803a4c8e2511fd11fae70, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8725,18 +8441,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 2696574571492749070, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.003845308, y: -0.000010905176, z: 0.010402169}
-    m_Extent: {x: 0.0044316156, y: 0.0009092478, z: 0.010402169}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &905325925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8839,8 +8544,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 9148106930174485795, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &907565816
-SkinnedMeshRenderer:
+--- !u!23 &907565816
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8854,7 +8559,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -8887,18 +8592,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 9148106930174485795, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &919105264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11144,8 +10838,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4579454407841743219, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &1107021497
-SkinnedMeshRenderer:
+--- !u!23 &1107021497
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -11159,7 +10853,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -11192,18 +10886,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4579454407841743219, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &1125029420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12765,8 +12448,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5074941243508514199, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &1276933270
-SkinnedMeshRenderer:
+--- !u!23 &1276933270
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12780,7 +12463,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -12813,18 +12496,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 5074941243508514199, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &1277576476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14862,8 +14534,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6968846074178130577, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &1527349183
-SkinnedMeshRenderer:
+--- !u!23 &1527349183
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -14877,7 +14549,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -14910,18 +14582,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -6968846074178130577, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &1556828591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16303,8 +15964,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6894428203817054813, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &1581604044
-SkinnedMeshRenderer:
+--- !u!23 &1581604044
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -16318,7 +15979,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -16351,18 +16012,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 6894428203817054813, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &1589422683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16461,8 +16111,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1568016432510859342, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &1604478135
-SkinnedMeshRenderer:
+--- !u!23 &1604478135
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -16476,7 +16126,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -16509,18 +16159,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 1568016432510859342, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &1630446712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18062,8 +17701,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8017566174234000633, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &1749888753
-SkinnedMeshRenderer:
+--- !u!23 &1749888753
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -18077,7 +17716,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -18110,18 +17749,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -8017566174234000633, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &1757198200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18539,8 +18167,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 9091874763089778162, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &1764222750
-SkinnedMeshRenderer:
+--- !u!23 &1764222750
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -18554,7 +18182,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -18587,18 +18215,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 9091874763089778162, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &1766808646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19013,6 +18630,104 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 63a3285c42f315843822817850d33e6f, type: 3}
+--- !u!23 &1785728550
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191614889}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d3791a8f15039d247a6c336421917189, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!23 &1806817225
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191614898}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d3791a8f15039d247a6c336421917189, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &1852920409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20284,8 +19999,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7196802604745430461, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &1928814703
-SkinnedMeshRenderer:
+--- !u!23 &1928814703
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -20299,7 +20014,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -20332,18 +20047,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -7196802604745430461, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1932588324
 GameObject:
   m_ObjectHideFlags: 0
@@ -22364,8 +22068,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1165073596168651963, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &2066036769
-SkinnedMeshRenderer:
+--- !u!23 &2066036769
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -22379,7 +22083,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -22412,18 +22116,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -1165073596168651963, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &2083311651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22523,8 +22216,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5650955413970618070, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &2089911188
-SkinnedMeshRenderer:
+--- !u!23 &2089911188
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -22538,7 +22231,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -22548,7 +22241,8 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3498384624342873181, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+  - {fileID: 2100000, guid: 4cd22b3632783164c9f9727ee85020d1, type: 2}
+  - {fileID: 3831827580505511055, guid: e4cca2bd22f7042429936f5db8561154, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22571,18 +22265,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -5650955413970618070, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.00001315074, y: 0.0000015893747, z: 0.010539899}
-    m_Extent: {x: 0.008863218, y: 0.00046198018, z: 0.010528037}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &2095267353
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22605,8 +22288,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5665763164275481281, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
---- !u!137 &2095267354
-SkinnedMeshRenderer:
+--- !u!23 &2095267354
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -22620,7 +22303,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -22653,18 +22336,7 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 5665763164275481281, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0.069681175, y: 0, z: 0.06571776}
-    m_Extent: {x: 0.07015108, y: 0.0677826, z: 0.06854619}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &2098748578
 PrefabInstance:
   m_ObjectHideFlags: 0
