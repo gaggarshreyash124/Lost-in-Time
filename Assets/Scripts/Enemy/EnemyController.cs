@@ -13,13 +13,13 @@ public class EnemyController : MonoBehaviour
     public LayerMask targetMask;
     public LayerMask obstructionMask;
 
-    public bool canSeePlayer;
     public Transform[] PatrolPoints;
     public int destPoint = 0;
     public bool iswaiting = false;
     public float waitTime = 2f;
     public float threshold = 0.5f;
     private NavMeshAgent agent;
+    public bool Detected = false;
 
     [Header("Angle Limits")]
     public float minAngle = -45f;
@@ -57,7 +57,6 @@ public class EnemyController : MonoBehaviour
         {
             yield return wait;
             FieldOfViewCheck();
-            GameManager.Instance.Detected = canSeePlayer;
         }
     }
 
@@ -76,21 +75,19 @@ public class EnemyController : MonoBehaviour
 
                 if (!Physics.Raycast(Raypoint.position, directionToTarget, distanceToTarget, obstructionMask))
                 {
-                    canSeePlayer = true;
+                    Detected = true;
                     GameManager.Instance.DetectionTimer = Time.time;
-                    
-
                 }
                 else
                 {
-                    canSeePlayer = false;
+                    Detected = false;
                 }
             }
             else
-                canSeePlayer = false;
+                Detected = false;
         }
-        else if (canSeePlayer)
-            canSeePlayer = false;
+        else
+            Detected = false;
     }
 
 
@@ -137,5 +134,7 @@ public class EnemyController : MonoBehaviour
         iswaiting = false;
     }
 
-    
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.red;
+    }
 }

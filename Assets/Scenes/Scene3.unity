@@ -11763,7 +11763,7 @@ Transform:
   m_GameObject: {fileID: 1223603522}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00000010033915, y: -0.000000020419922, z: -2.0489176e-15, w: 1}
-  m_LocalPosition: {x: 58.19617, y: 13.3, z: -26.6745}
+  m_LocalPosition: {x: 22.5, y: 13.3, z: -92.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12667,7 +12667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6950107327417236136, guid: 003c0fce79761414aae1e5d606b3a254, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58.19617
+      value: 22.5
       objectReference: {fileID: 0}
     - target: {fileID: 6950107327417236136, guid: 003c0fce79761414aae1e5d606b3a254, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12675,7 +12675,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6950107327417236136, guid: 003c0fce79761414aae1e5d606b3a254, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.1145
+      value: -92.3
       objectReference: {fileID: 0}
     - target: {fileID: 6950107327417236136, guid: 003c0fce79761414aae1e5d606b3a254, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15618,7 +15618,7 @@ Transform:
   m_GameObject: {fileID: 1577888587}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00000010033915, y: -0.000000020419922, z: 1.2485375e-10, w: 1}
-  m_LocalPosition: {x: 58.19617, y: 13.3, z: -26.6745}
+  m_LocalPosition: {x: 22.5, y: 13.3, z: -92.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22708,6 +22708,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9074499226501125015, guid: b700895eca5cd964580b629baaa5f499, type: 3}
+      propertyPath: angle
+      value: 167
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074499226501125015, guid: b700895eca5cd964580b629baaa5f499, type: 3}
+      propertyPath: radius
+      value: 64.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074499226501125015, guid: b700895eca5cd964580b629baaa5f499, type: 3}
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 1277576478}
@@ -22717,7 +22725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9074499226501125015, guid: b700895eca5cd964580b629baaa5f499, type: 3}
       propertyPath: targetMask.m_Bits
-      value: 0
+      value: 128
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

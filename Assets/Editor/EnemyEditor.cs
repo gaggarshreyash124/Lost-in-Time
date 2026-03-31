@@ -21,7 +21,7 @@ public class EnemyEditor : OdinEditor
         Handles.DrawLine(fov.Raypoint.position, fov.Raypoint.position + viewAngle01 * fov.radius);
         Handles.DrawLine(fov.Raypoint.position, fov.Raypoint.position + viewAngle02 * fov.radius);
 
-        if (fov.canSeePlayer)
+        if (fov.Detected)
         {
             Handles.color = Color.green;
             Handles.DrawLine(fov.Raypoint.position, fov.playerRef.transform.position);
