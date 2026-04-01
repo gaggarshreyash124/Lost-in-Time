@@ -67,7 +67,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   ScanMat: {fileID: 0}
-  ScanEffectIntensity: 0.35
+  interactableraycastDistance: 5
+  PastPlayer: {fileID: 0}
+  Past: {fileID: 0}
 --- !u!65 &4079787340138570553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -253,6 +255,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 230079338845283164}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: onPauseInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ceff1321-5640-44c5-be97-74bcea2b56e7
+    m_ActionName: 'Player/Pause[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: 
@@ -272,6 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInputHandler
   ScanInput: 0
   InteractInput: 0
+  PauseInput: 0
 --- !u!1 &8163711543335228728
 GameObject:
   m_ObjectHideFlags: 0
