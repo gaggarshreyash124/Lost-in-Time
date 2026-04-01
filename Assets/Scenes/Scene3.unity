@@ -1430,7 +1430,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5079447371881876404, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5079447371881876404, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 5148817236446094103, guid: f57467894609f81438d5e15e627ea9a9, type: 3}
       propertyPath: m_Layer
@@ -6016,6 +6020,7 @@ MonoBehaviour:
   clueName: Keycard
   clue: {fileID: 97744324}
   playableAsset: {fileID: 0}
+  audioClip: {fileID: 0}
   isFound: 0
   isPickable: 1
 --- !u!64 &602257135
@@ -20500,6 +20505,7 @@ MonoBehaviour:
   clueName: CompDocument
   clue: {fileID: 382228181}
   playableAsset: {fileID: 0}
+  audioClip: {fileID: 0}
   isFound: 0
   isPickable: 0
 --- !u!65 &1902534852
@@ -22555,6 +22561,8 @@ MonoBehaviour:
   audioSource: {fileID: 301434662}
   audioClip: {fileID: 0}
   KeycardsFound: 0
+  GlassesFound: 0
+  playerData: {fileID: 0}
 --- !u!4 &2038174796
 Transform:
   m_ObjectHideFlags: 0

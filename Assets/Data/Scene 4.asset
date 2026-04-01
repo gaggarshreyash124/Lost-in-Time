@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9aa1a0c7c78cbac4b99f98966fc010b7, type: 3}
-  m_Name: Scene 3
+  m_Name: Scene 4
   m_EditorClassIdentifier: Assembly-CSharp::SceneData
   Clues:
   - {fileID: 0}
   - {fileID: 0}
-  ObjectiveText: Objective - Enter HR Room to find out about project
+  - {fileID: 0}
+  - {fileID: 0}
+  ObjectiveText: Objective - Time Glasses Found! Use on Dead Body
   Cluestart: Objective - Find The Clues Scattered Across the House(
-  Clueend: /2)
+  Clueend: /4)

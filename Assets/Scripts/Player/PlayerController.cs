@@ -3,6 +3,8 @@ using Unity.Cinemachine;
 using UnityEngine.VFX;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.Playables;
+using Unity.VisualScripting;
 
 public class PlayerController : MonoBehaviour
 {
@@ -23,6 +25,8 @@ public class PlayerController : MonoBehaviour
     float counter;
     [Range(0f, 10f)]
     public float interactableraycastDistance = 5f;
+    public PlayableDirector PastPlayer;
+    public PlayableAsset Past;
 
     bool TouchedGround()
     {
@@ -32,6 +36,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Rbody = GetComponent<Rigidbody>();
+        Data.PastPlayed = false;
 
     }
     void Update()
@@ -44,12 +49,6 @@ public class PlayerController : MonoBehaviour
         else if (!TouchedGround() && Data.isGrounded)
         {
             Data.isGrounded = false;
-        }
-
-        if (PlayerInputHandler.Instance.ScanInput)
-        {
-            counter = 0f;
-            StartExpandingScan();
         }
         if (PlayerInputHandler.Instance.InteractInput)
         {
@@ -106,11 +105,7 @@ public class PlayerController : MonoBehaviour
     {
         Rbody.linearDamping = Data.isGrounded ? Data.GroundDrag : Data.AirDrag;
     }
-    public void StartExpandingScan()
-    {
-        PlayerInputHandler.Instance.ScanInput = false;
-        StartCoroutine(ExpandingScanCoroutine());
-    }
+    
     public void CheckForDoors()
     {
         Physics.Raycast(FollowCam.transform.position, FollowCam.transform.forward, out RaycastHit hit, 3f, InteractableLayerMask);
@@ -147,6 +142,10 @@ public class PlayerController : MonoBehaviour
                     Debug.Log("Door is Locked");
                 }
             }
+            else if (hit.collider.CompareTag("Respawn"))
+            {
+                PastPlayer.Play(Past);
+            }
 
         }
     }
@@ -162,24 +161,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    private IEnumerator ExpandingScanCoroutine()
-    {
-        float elapsed = 0f;
-
-        while (elapsed < expandDuration)
-        {
-            elapsed += Time.deltaTime;
-            currentRadius = Mathf.Lerp(0f, maxScanDistance, elapsed / expandDuration);
-
-            int hitCount = Physics.OverlapSphereNonAlloc(transform.position, currentRadius, ScannedObjects, targetLayerMask);
-            for (int i = 0; i < hitCount; i++)
-            {
-                ScannedObjects[i].GetComponent<MeshRenderer>().material = ScanMat;
-            }
-
-            yield return null;
-        }
-    }
+    
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
@@ -187,5 +169,21 @@ public class PlayerController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawRay(FollowCam.transform.position, FollowCam.transform.forward * interactableraycastDistance);
     }
-
+    void OnTriggerStay(Collider other)
+    {
+        bool scanInput = PlayerInputHandler.Instance.ScanInput;
+        if (other.gameObject.CompareTag("Past") && Data.GlassesFound && !Data.PastPlayed && scanInput)
+        {
+            PastPlayer.Play(Past);
+            if (PastPlayer.state == PlayState.Playing)
+            {
+                Data.PastPlayed = true;
+            }
+        }
+       
+    }
+    public void EndGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }

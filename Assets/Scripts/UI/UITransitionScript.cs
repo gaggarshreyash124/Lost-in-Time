@@ -31,5 +31,11 @@ public class UITransitionScript : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+    public void Unpause(GameObject pauseMenu)
+     {
+        Time.timeScale = 1f;
+        pauseMenu.SetActive(false);
+    }
+     
 
 }

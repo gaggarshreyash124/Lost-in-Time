@@ -8,5 +8,6 @@ public class PlayerData : ScriptableObject
     public float AirDrag;
     public float GroundDrag;
     public float AirMoveSpeedMultiplier;
-
+    public bool GlassesFound;
+    public bool PastPlayed;
 }

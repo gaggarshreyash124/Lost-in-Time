@@ -2174,6 +2174,7 @@ MonoBehaviour:
   clueName: clue2
   clue: {fileID: 306036821}
   playableAsset: {fileID: 11400000, guid: b747a1a33681efd46bf4396ba80d3029, type: 2}
+  audioClip: {fileID: 0}
   isFound: 0
   isPickable: 0
 --- !u!1001 &734346336
@@ -3494,6 +3495,8 @@ MonoBehaviour:
   audioSource: {fileID: 105900426}
   audioClip: {fileID: 8300000, guid: b298ec28690c02548a3a07fb80f85a12, type: 3}
   KeycardsFound: 0
+  GlassesFound: 0
+  playerData: {fileID: 0}
 --- !u!4 &1017815764
 Transform:
   m_ObjectHideFlags: 0
@@ -4793,6 +4796,7 @@ MonoBehaviour:
   clueName: clue 3
   clue: {fileID: 1584377320}
   playableAsset: {fileID: 0}
+  audioClip: {fileID: 0}
   isFound: 0
   isPickable: 0
 --- !u!1 &1584377320
@@ -6507,6 +6511,7 @@ MonoBehaviour:
   clueName: clue 1
   clue: {fileID: 1243159778}
   playableAsset: {fileID: 0}
+  audioClip: {fileID: 0}
   isFound: 0
   isPickable: 0
 --- !u!1 &2094688010
@@ -10753,6 +10758,10 @@ PrefabInstance:
     - target: {fileID: 809070080179339459, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
       propertyPath: m_Name
       value: PlayerUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382093941836531317, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
+      propertyPath: m_text
+      value: Objective - Find The Clues Scattered Across the House(0/3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

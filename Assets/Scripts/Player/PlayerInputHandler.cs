@@ -8,10 +8,11 @@ public class PlayerInputHandler : MonoBehaviour
     public Vector2 MoveInput {get; private set;}
     public bool ScanInput;
     public bool InteractInput;
+    public bool PauseInput;
 
     private void Awake() 
     {
-         if (Instance != null && Instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
@@ -36,6 +37,10 @@ public class PlayerInputHandler : MonoBehaviour
         {
             ScanInput = true;
         }
+        else if (context.canceled)
+        {
+            ScanInput = false;
+        }
     }
     public void onInteractInput(InputAction.CallbackContext context)
     {
@@ -48,4 +53,12 @@ public class PlayerInputHandler : MonoBehaviour
             InteractInput = false;
         }
     }
+    public void onPauseInput(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            PauseInput = true;
+        }
+    }
+   
 }

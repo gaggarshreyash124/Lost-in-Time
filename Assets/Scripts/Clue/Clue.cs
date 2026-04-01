@@ -7,6 +7,7 @@ public class Clue : MonoBehaviour
     public string clueName;
     public GameObject clue;
     public PlayableAsset playableAsset;
+    public AudioClip audioClip;
     public bool isFound = false;
     public bool isPickable = false;
     private void OnTriggerStay(Collider other) {
@@ -18,14 +19,18 @@ public class Clue : MonoBehaviour
                 {
                     GameManager.Instance.KeycardsFound = true;
                 }
+                else if (clueName == "Glasses")
+                {
+                    GameManager.Instance.GlassesFound = true;
+                }
                 isFound = true;
-                GameManager.Instance.OnPickableFound(clueName, clue, playableAsset);
+                GameManager.Instance.OnPickableFound(clueName, clue, playableAsset, audioClip);
                 Debug.Log($"Clue {clueName} found!");
             }
             else if (GameManager.Instance.sceneData.foundClues.Add(clueName))  
             {
                 isFound = true;
-                GameManager.Instance.OnClueFound(clueName, clue, playableAsset);
+                GameManager.Instance.OnClueFound(clueName, clue, playableAsset, audioClip);
                 Debug.Log($"Clue {clueName} found!");
             }
             

@@ -16,8 +16,10 @@ public class GameManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip audioClip;
     bool audioPlayed = false;
-    
+
     public bool KeycardsFound = false;
+    public bool GlassesFound = false;
+    public PlayerData playerData;
     private void Awake()
     {
         Instance = this;
@@ -26,9 +28,14 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (currentSceneIndex == 4)
+        {
+            playerData.GlassesFound = false;
+        }
+
     }
 
-    public void OnClueFound(string clueID, GameObject clueObject, PlayableAsset playableAsset)
+    public void OnClueFound(string clueID, GameObject clueObject, PlayableAsset playableAsset, AudioClip audioClip)
     {
         foundClues.Add(clueID);
         clueObject.SetActive(true);
@@ -38,7 +45,7 @@ public class GameManager : MonoBehaviour
             playableDirector.Play(playableAsset);
         }
     }
-    public void OnPickableFound(string clueID, GameObject clueObject, PlayableAsset playableAsset)
+    public void OnPickableFound(string clueID, GameObject clueObject, PlayableAsset playableAsset, AudioClip audioClip)
     {
         foundClues.Add(clueID);
         clueObject.SetActive(true);
@@ -47,6 +54,10 @@ public class GameManager : MonoBehaviour
         {
             playableDirector.Play(playableAsset);
         }
+        if (audioClip != null)
+        {
+            audioSource.PlayOneShot(audioClip);
+        }
     }
     private void Update()
     {
@@ -54,12 +65,32 @@ public class GameManager : MonoBehaviour
         {
             if (playableDirector.state != PlayState.Playing && !audioPlayed)
             {
-                Objective.text = "Objectivew - Head to The Door";
-                audioSource.PlayOneShot(audioClip);
-                audioPlayed = true;
+                if (SceneManager.GetActiveScene().buildIndex == 4)
+                {
+                    Objective.text = "Objective - Use Glasses near Body to find out what happened";
+                    if (playerData.PastPlayed && playableDirector.state != PlayState.Playing)
+                    {
+                        Objective.text = "Objective - Head to the door";
+                        audioSource.PlayOneShot(audioClip);
+                        audioPlayed = true;
+                    }
+                }
+                else if (SceneManager.GetActiveScene().buildIndex == 2)
+                {
+                    Objective.text = "Objective - Head to the door ";
+                    audioSource.PlayOneShot(audioClip);
+                    audioPlayed = true;
+                }
+
             }
         }
-        
+        if (playerData != null)
+        {
+            if (GlassesFound && !playerData.GlassesFound)
+            {
+                playerData.GlassesFound = true;
+            }
+        }
 
     }
 
