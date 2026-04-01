@@ -1,3 +1,4 @@
+using System;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -5,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class UITransitionScript : MonoBehaviour
 {
    public CinemachineCamera CurrentCam;
+   public GameObject pauseMenu;
+   private bool isPaused = false;
 
     void Start()
     {
@@ -32,10 +35,26 @@ public class UITransitionScript : MonoBehaviour
         SceneManager.LoadScene(0);
     }
     public void Unpause(GameObject pauseMenu)
-     {
+    {
+        Debug.Log("Unpausing");
         Time.timeScale = 1f;
         pauseMenu.SetActive(false);
+        isPaused = false;
     }
-     
+    void Update()
+    {
+        if(PlayerInputHandler.Instance.PauseInput && !isPaused)
+        {
 
+            Pause(pauseMenu);
+            isPaused = true;
+        }
+        
+    }
+
+    private void Pause(GameObject pauseMenu)
+    {
+        Time.timeScale = 0f;
+        pauseMenu.SetActive(true);
+    }
 }

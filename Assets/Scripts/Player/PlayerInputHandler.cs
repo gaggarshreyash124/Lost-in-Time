@@ -57,7 +57,11 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (context.performed)
         {
-            PauseInput = true;
+             PauseInput = true;
+        }
+         else if (context.canceled)
+        {
+            PauseInput = false;
         }
     }
    

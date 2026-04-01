@@ -5098,6 +5098,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8dd97c8a8bac6604fb52c81df72da006, type: 3}
   m_PrefabInstance: {fileID: 330539844}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &338831059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6441094687145639770, guid: 6e44de4d64ac04c419e362f6a43366e0, type: 3}
+  m_PrefabInstance: {fileID: 1685784700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &338831061
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338831059}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3197455731191493066, guid: 6e44de4d64ac04c419e362f6a43366e0, type: 3}
 --- !u!1 &338901403 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3316584776227477332, guid: 6e44de4d64ac04c419e362f6a43366e0, type: 3}
@@ -7671,7 +7698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5701216593557417483, guid: 003c0fce79761414aae1e5d606b3a254, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6950107327417236136, guid: 003c0fce79761414aae1e5d606b3a254, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21438,6 +21465,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerUI
       objectReference: {fileID: 0}
+    - target: {fileID: 1145944827377992707, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1030692526}
+    - target: {fileID: 1145944827377992707, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Unpause
+      objectReference: {fileID: 0}
     - target: {fileID: 4884281428157505962, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -21445,6 +21480,10 @@ PrefabInstance:
     - target: {fileID: 6382093941836531317, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
       propertyPath: m_text
       value: Objective - Find The Clues Scattered Across the House(0/4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930428272626118037, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21467,6 +21506,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4884281428157505962, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
   m_PrefabInstance: {fileID: 1030692522}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1030692526 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8172522831480439412, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
+  m_PrefabInstance: {fileID: 1030692522}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed15b9a721be94f48abf97d8d2014dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UITransitionScript
 --- !u!1001 &1030755054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31546,7 +31596,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2b4d0d2c648974846a27b9604a377416, type: 2}
     - target: {fileID: -6441094687145639770, guid: 6e44de4d64ac04c419e362f6a43366e0, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -6441094687145639770, guid: 6e44de4d64ac04c419e362f6a43366e0, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: -6441094687145639770, guid: 6e44de4d64ac04c419e362f6a43366e0, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -32302,6 +32356,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2045257923548263128, guid: 6e44de4d64ac04c419e362f6a43366e0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 338901410}
+    - targetCorrespondingSourceObject: {fileID: -6441094687145639770, guid: 6e44de4d64ac04c419e362f6a43366e0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 338831061}
     - targetCorrespondingSourceObject: {fileID: -4260180326748962481, guid: 6e44de4d64ac04c419e362f6a43366e0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1436026519}
