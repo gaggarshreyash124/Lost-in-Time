@@ -21465,6 +21465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerUI
       objectReference: {fileID: 0}
+    - target: {fileID: 809070080179339459, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1145944827377992707, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -21475,7 +21479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4884281428157505962, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6382093941836531317, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
       propertyPath: m_text
@@ -21495,23 +21499,18 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6382093941836531317, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
   m_PrefabInstance: {fileID: 1030692522}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030692524}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
---- !u!1 &1030692524 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4884281428157505962, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
-  m_PrefabInstance: {fileID: 1030692522}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1030692526 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8172522831480439412, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
   m_PrefabInstance: {fileID: 1030692522}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1056890089}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed15b9a721be94f48abf97d8d2014dc7, type: 3}
@@ -21656,6 +21655,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d2d31ee40d5fe864b82c4cd3a8a01bc1, type: 3}
   m_PrefabInstance: {fileID: 1030755054}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1056890089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 809070080179339459, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
+  m_PrefabInstance: {fileID: 1030692522}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1078846088
 GameObject:
@@ -38283,7 +38287,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 1030692524}
+        - m_Target: {fileID: 1056890089}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
