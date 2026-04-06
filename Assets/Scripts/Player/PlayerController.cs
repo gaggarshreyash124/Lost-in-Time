@@ -172,12 +172,26 @@ public class PlayerController : MonoBehaviour
     void OnTriggerStay(Collider other)
     {
         bool scanInput = PlayerInputHandler.Instance.ScanInput;
-        if (other.gameObject.CompareTag("Past") && Data.GlassesFound && !Data.PastPlayed && scanInput)
+        if (other.gameObject.CompareTag("Past") )
         {
-            PastPlayer.Play(Past);
-            if (PastPlayer.state == PlayState.Playing)
+            if (GameManager.Instance.AbilityButton != null)
             {
-                Data.PastPlayed = true;
+                GameManager.Instance.AbilityButton.SetActive(true);
+            }
+            if (Data.GlassesFound && !Data.PastPlayed && scanInput)
+            {
+                PastPlayer.Play(Past);
+                if (PastPlayer.state == PlayState.Playing)
+                {
+                    Data.PastPlayed = true;
+                }
+            }
+        }
+        else
+        {
+            if (GameManager.Instance.AbilityButton != null)
+            {
+                GameManager.Instance.AbilityButton.SetActive(false);
             }
         }
        

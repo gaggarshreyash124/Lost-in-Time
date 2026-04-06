@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     public bool KeycardsFound = false;
     public bool GlassesFound = false;
     public PlayerData playerData;
+    public GameObject InteractButton;
+    public GameObject AbilityButton;
     private void Awake()
     {
         Instance = this;
