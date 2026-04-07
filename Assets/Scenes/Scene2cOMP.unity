@@ -3540,7 +3540,9 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: b298ec28690c02548a3a07fb80f85a12, type: 3}
   KeycardsFound: 0
   GlassesFound: 0
-  playerData: {fileID: 0}
+  playerData: {fileID: 11400000, guid: 24b42595153b8294a882a373ca7a02c4, type: 2}
+  InteractButton: {fileID: 5573749233577914791}
+  AbilityButton: {fileID: 5573749233577914790}
 --- !u!4 &1017815764
 Transform:
   m_ObjectHideFlags: 0
@@ -10799,11 +10801,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3624729367989509957, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7552785624210081129, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
+--- !u!1 &5573749233577914790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3090341546548774008, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
+  m_PrefabInstance: {fileID: 5573749233577914789}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5573749233577914791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7552785624210081129, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
+  m_PrefabInstance: {fileID: 5573749233577914789}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5574988834661343958
 GameObject:
   m_ObjectHideFlags: 0

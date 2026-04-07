@@ -30,11 +30,14 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        if (currentSceneIndex == 4)
+        if (currentSceneIndex <= 4)
         {
             playerData.GlassesFound = false;
         }
-
+        else if (currentSceneIndex > 4)
+        {
+            playerData.GlassesFound = true;
+        }
     }
 
     public void OnClueFound(string clueID, GameObject clueObject, PlayableAsset playableAsset, AudioClip audioClip)

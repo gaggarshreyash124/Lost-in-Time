@@ -14447,11 +14447,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3624729367989509957, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7552785624210081129, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
+--- !u!1 &1519315755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3090341546548774008, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
+  m_PrefabInstance: {fileID: 1519315754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1519315756 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6382093941836531317, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
@@ -14463,6 +14476,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &1519315757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7552785624210081129, guid: 4ce33a2248543944aa1fd76c57df7773, type: 3}
+  m_PrefabInstance: {fileID: 1519315754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!64 &1527349182
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22123,6 +22141,8 @@ MonoBehaviour:
   KeycardsFound: 0
   GlassesFound: 0
   playerData: {fileID: 0}
+  InteractButton: {fileID: 1519315757}
+  AbilityButton: {fileID: 1519315755}
 --- !u!4 &2038174796
 Transform:
   m_ObjectHideFlags: 0

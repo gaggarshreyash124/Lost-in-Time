@@ -45,12 +45,17 @@ public class Clue : MonoBehaviour
 
 
         }
-        else
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
         {
             if (GameManager.Instance.InteractButton != null)
             {
                 GameManager.Instance.InteractButton.SetActive(false);
             }
         }
+
     }
 }

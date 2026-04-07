@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public float GroundCheckRadius;
     public LayerMask GroundLayer;
     public VisualEffectAsset Scan;
+    RaycastHit hit;
     [SerializeField] private float maxScanDistance = 10f;
     [SerializeField] private float expandDuration = 1f;
     Collider[] ScannedObjects;
@@ -62,6 +63,21 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         LimitSpeed();
         ApplyDrag();
+        Physics.Raycast(FollowCam.transform.position, FollowCam.transform.forward, out hit, 3f, InteractableLayerMask);
+        if (hit.collider != null)
+        {
+            if (GameManager.Instance.InteractButton != null)
+            {
+                GameManager.Instance.InteractButton.SetActive(true);
+            }
+        }
+        else
+        {
+            if (GameManager.Instance.InteractButton != null)
+            {
+                GameManager.Instance.InteractButton.SetActive(false);
+            }
+        }
 
     }
     private void HandleMovement()
@@ -105,10 +121,9 @@ public class PlayerController : MonoBehaviour
     {
         Rbody.linearDamping = Data.isGrounded ? Data.GroundDrag : Data.AirDrag;
     }
-    
+
     public void CheckForDoors()
     {
-        Physics.Raycast(FollowCam.transform.position, FollowCam.transform.forward, out RaycastHit hit, 3f, InteractableLayerMask);
         if (hit.collider != null)
         {
             if (hit.collider.CompareTag("Door"))
@@ -151,7 +166,7 @@ public class PlayerController : MonoBehaviour
     }
     public void CheckForEndofScene()
     {
-        Physics.Raycast(FollowCam.transform.position, FollowCam.transform.forward, out RaycastHit hit, interactableraycastDistance, InteractableLayerMask);
+
         if (hit.collider != null)
         {
             if (hit.collider.CompareTag("Finish") && GameManager.Instance.foundClues.Count == GameManager.Instance.sceneData.Clues.Length)
@@ -161,7 +176,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
@@ -172,13 +187,13 @@ public class PlayerController : MonoBehaviour
     void OnTriggerStay(Collider other)
     {
         bool scanInput = PlayerInputHandler.Instance.ScanInput;
-        if (other.gameObject.CompareTag("Past") )
+        if (other.gameObject.CompareTag("Past") && Data.GlassesFound)
         {
             if (GameManager.Instance.AbilityButton != null)
             {
                 GameManager.Instance.AbilityButton.SetActive(true);
             }
-            if (Data.GlassesFound && !Data.PastPlayed && scanInput)
+            if (!Data.PastPlayed && scanInput)
             {
                 PastPlayer.Play(Past);
                 if (PastPlayer.state == PlayState.Playing)
@@ -187,14 +202,18 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-        else
+
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Past"))
         {
             if (GameManager.Instance.AbilityButton != null)
             {
                 GameManager.Instance.AbilityButton.SetActive(false);
             }
         }
-       
     }
     public void EndGame()
     {
