@@ -10,7 +10,8 @@ public class Clue : MonoBehaviour
     public AudioClip audioClip;
     public bool isFound = false;
     public bool isPickable = false;
-    private void OnTriggerStay(Collider other)
+    
+    void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -43,7 +44,6 @@ public class Clue : MonoBehaviour
                 }
             }
 
-
         }
     }
 
@@ -58,4 +58,5 @@ public class Clue : MonoBehaviour
         }
 
     }
+
 }

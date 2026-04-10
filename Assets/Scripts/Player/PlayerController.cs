@@ -5,6 +5,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.Playables;
 using Unity.VisualScripting;
+using UnityEngine.ProBuilder.Shapes;
 
 public class PlayerController : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
     public float interactableraycastDistance = 5f;
     public PlayableDirector PastPlayer;
     public PlayableAsset Past;
+    public bool dooropened;
 
     bool TouchedGround()
     {
@@ -56,6 +58,7 @@ public class PlayerController : MonoBehaviour
             CheckForDoors();
             CheckForEndofScene();
         }
+        
     }
 
     void FixedUpdate()
@@ -63,6 +66,7 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         LimitSpeed();
         ApplyDrag();
+        
         Physics.Raycast(FollowCam.transform.position, FollowCam.transform.forward, out hit, 3f, InteractableLayerMask);
         if (hit.collider != null)
         {
@@ -128,12 +132,15 @@ public class PlayerController : MonoBehaviour
         {
             if (hit.collider.CompareTag("Door"))
             {
-                if (hit.collider.transform.rotation.y == 0f)
+                if (hit.collider.transform.rotation.y == 0f && !dooropened)
                 {
+                    dooropened = true;
                     hit.collider.transform.Rotate(0f, -90f, 0f);
+                    StartCoroutine(cooldownDoor());
                 }
-                else
+                else if (!dooropened)
                 {
+                    dooropened = true;
                     hit.collider.transform.Rotate(0f, 90f, 0f);
                 }
                 Debug.Log("Door Checked");
@@ -163,6 +170,12 @@ public class PlayerController : MonoBehaviour
             }
 
         }
+    }
+
+    public IEnumerator cooldownDoor()
+    {
+        yield return new WaitForSeconds(.1f);
+        dooropened = false;
     }
     public void CheckForEndofScene()
     {

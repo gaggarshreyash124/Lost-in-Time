@@ -7674,7 +7674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 230079338845283164, guid: 003c0fce79761414aae1e5d606b3a254, type: 3}
       propertyPath: InteractInput
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4106970954360305776, guid: 003c0fce79761414aae1e5d606b3a254, type: 3}
       propertyPath: Past
