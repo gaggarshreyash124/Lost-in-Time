@@ -218,6 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInputHandler
   ScanInput: 0
   InteractInput: 0
+  PauseInput: 0
 --- !u!114 &320409041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,10 +244,13 @@ MonoBehaviour:
   targetLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  InteractableLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   ScanMat: {fileID: 2100000, guid: b86cdb7f2c217a14e9f7a8681b0a5e6f, type: 2}
-  volume: {fileID: 832575518}
-  bloom: {fileID: 0}
-  ScanEffectIntensity: 0.591
+  interactableraycastDistance: 5
+  PastPlayer: {fileID: 0}
+  Past: {fileID: 0}
 --- !u!136 &320409042
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1038,6 +1042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   radius: 8.32
   angle: 99
+  Raypoint: {fileID: 1108970503}
   playerRef: {fileID: 320409039}
   targetMask:
     serializedVersion: 2
@@ -1045,7 +1050,6 @@ MonoBehaviour:
   obstructionMask:
     serializedVersion: 2
     m_Bits: 264
-  canSeePlayer: 0
   PatrolPoints:
   - {fileID: 200423093}
   - {fileID: 390985287}
@@ -1058,6 +1062,17 @@ MonoBehaviour:
   iswaiting: 0
   waitTime: 2
   threshold: 0.5
+  Detected: 0
+  minAngle: -45
+  maxAngle: 45
+  startMovingRight: 1
+  rotationSpeed: 100
+  DetectionTime: 0
+  CaughtTime: 2
+  Caught: 0
+  CaughtPanel: {fileID: 0}
+  Warning: {fileID: 0}
+  loseDetectionDelay: 0.5
 --- !u!195 &1108970505
 NavMeshAgent:
   m_ObjectHideFlags: 0
