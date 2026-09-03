@@ -1,5 +1,5 @@
 # Lost-in-Time
-Detective Game Where the player Has to Solve his Friends 
+ This is a 3D detective game where the player is a detective who helps find his friend’s wife’s killer, here the killer is actually someone the detective knows who is seeking revenge
 
 # Team and Contribution
 - Shreyash Gagger - Programmer 
